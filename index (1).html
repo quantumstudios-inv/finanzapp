@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>FinanzApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- Header -->
+    <header class="header">
+      <img src="fiapp-logo.jpg" alt="Logo FinanzApp" class="logo">
+      <h1 class="app-name">FinanzApp</h1>
+    </header>
+
+    <!-- Dinero disponible -->
+    <section class="balance-card">
+      <p class="label">Dinero disponible</p>
+      <h2 id="balance" class="balance">$0.00</h2>
+    </section>
+
+    <!-- Botones principales -->
+    <div class="actions">
+      <button class="btn neon-blue" onclick="openModal('recurrentes')">
+        Agregar gastos recurrentes
+      </button>
+
+      <button class="btn neon-blue" onclick="openModal('gastos')">
+        Agregar gastos extra
+      </button>
+
+      <button class="btn neon-blue" onclick="openModal('ingresos')">
+        Agregar ingresos extra
+      </button>
+
+      <button class="btn neon-green" onclick="openModal('sueldo')">
+        Agregar sueldo
+      </button>
+    </div>
+
+    <!-- Lista de movimientos -->
+    <section class="movimientos">
+      <h3>Últimos movimientos</h3>
+      <div id="listaMovimientos"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      codex studio© • Todos los derechos reservados 2026
+    </footer>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
